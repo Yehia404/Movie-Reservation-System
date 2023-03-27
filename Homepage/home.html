@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<link href="style.css" rel="stylesheet">
+<script src="functions.js"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="#home" class="left">Home</a>
+            
+            <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">Movies
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+              <a href="#">What's On</a>
+              <a href="#">Coming Soon</a>
+            </div>
+            </div>
+            <a href="#contact" class="left">Contact Us</a>
+            <a href="#" class="right">Sign up</a>
+            <a href="#" class="right">Login</a>
+          </div>
+        <br>
+        <br>
+        <div class="slideshow-container">
+
+            <!-- Images -->
+            <div class="mySlides fade">
+              <img src="https://wallpapercave.com/wp/wp11345410.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="https://cdn.theplaylist.net/wp-content/uploads/2023/02/13123714/INTLPoster_CREED3_2764x4096.jpg" style="width:100%">
+             </div>
+          
+            <div class="mySlides fade">
+              <img src="http://wearesecondunion.com/wp-content/uploads/2022/12/SFOTG-1140.png" style="width:100%">
+            </div>
+          
+            <!-- Next and previous -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <!-- Dots -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+    </body>
+</html>
