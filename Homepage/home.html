@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <link rel="icon" type="image/x-icon" href="asu-logo.png">
+      <title>ASU Cinema</title>
 <link href="style.css" rel="stylesheet">
 <script src="functions.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     </head>
     <body>
-    
-        <div class="navbar">
-          <a href="#" class="left" > <img src="asu-logo.png" alt="Logo" class="logo"> </a>
-          <a href="#home" class="left">Home</a>
-            <div class="dropdown">
-            <button class="dropbtn" onclick="myFunction()">Movies
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content" id="myDropdown">
-              <a href="#">What's On</a>
-              <a href="#">Coming Soon</a>
+      <header>
+        <div class="header-left">
+            <div class="logo">
+                <a href="home.html"><img src="asu-logo.png" alt="logo"></a>
             </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="" class="active">Home</a>
+                    </li>
+                    <li>
+                      <a href="">Movies</a>
+                    </li>
+                    <li>
+                        <a href="">About Us</a>
+                    </li>
+                </ul>
+                <div class="login-signup">
+                    <a href="">Login</a> or <a href="">Signup</a>
+                </div>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="login-signup">
+                <a href="">Login</a>
+                <a href="">Signup</a>
             </div>
-            <a href="#contact" class="left">Contact Us</a>
-            <a href="#" class="right">Sign up</a>
-            <a href="#" class="right">Login</a>
-            <div class="search-container">
-              <form action="/action_page.John Wick 4">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-              </form>
+            <div class="resp">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-          </div>
+        </div>
+    </header>
+    <script>
+      resp = document.querySelector(".resp");
+        nav = document.querySelector("nav");
+        resp.onclick = function() {
+            nav.classList.toggle("active");
+        }
+    </script>
 
-        <form action="#" class="fbook" >
+        <!-- <form action="#" class="fbook" >
           <select name="movies" class="movie" >
             <option value="" disabled selected>Select a Movie...</option>
             <option value="CreedIII">Creed III</option>
@@ -39,62 +59,87 @@
             <option value="Shazam">Shazam Fury Of The Kings</option>
           </select>
           <input class="book" type="submit" value="Find Times and Book" />
-        </form>
-        <br>
-        <br>
+        </form> -->
+        
         <div class="slideshow-container">
 
-            <!-- Images -->
+            
             <div class="mySlides fade">
-              <img src="https://wallpapercave.com/wp/wp11345410.jpg" style="width:100%">
+              <img src="https://www.koimoi.com/wp-content/new-galleries/2022/07/john-wick-4-trailer-packed-with-skull-bashing-gun-fu-001.jpg" style="width:100%">
             </div>
           
             <div class="mySlides fade">
-              <img src="https://cdn.theplaylist.net/wp-content/uploads/2023/02/13123714/INTLPoster_CREED3_2764x4096.jpg" style="width:100%">
+              <img src="https://www.showbiz411.com/wp-content/uploads/2023/03/Yellow-Photo-Food-Challenge-YouTube-Thumbnail-2.jpg" style="width:100%">
              </div>
           
             <div class="mySlides fade">
               <img src="http://wearesecondunion.com/wp-content/uploads/2022/12/SFOTG-1140.png" style="width:100%">
             </div>
           
-            <!-- Next and previous -->
+            
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
           <br>
           
-          <!-- Dots -->
+          
           <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
           </div>
+        </div>
+          <br>
+          <br>
+          <hr>
 
+          <h1 class="on">What's On</h1>
+          <hr class="online">
           <div class="row">
             <div class="column">
-              <img src="">
-              <img src="https://wallpapercave.com/wp/wp11345410.jpg">
-              <img src="https://assets.voxcinemas.com/posters/P_HO00009436.jpg">
-              <img src="mist.jpg">
-              <img src="paris.jpg">
+              <div class="container">
+                <img src="https://wallpapercave.com/wp/wp11345410.jpg" alt="Avatar" class="image" >
+                <div class="middle">
+                  <a href="#" class="text">Book a Ticket</a>
+                </div>
+              </div>
+              <div class="container">
+                <img src="https://assets.voxcinemas.com/posters/P_HO00009436.jpg" alt="Avatar" class="image" width="200" height="400">
+                <div class="middle">
+                  <a href="#" class="text">Book a Ticket</a>
+                </div>
+              </div>
+              <div class="container">
+                <img src="https://assets.voxcinemas.com/posters/P_HO00010061.jpg" alt="Avatar" class="image" width="200" height="300" >
+                <div class="middle">
+                  <a href="#" class="text">Book a Ticket</a>
+                </div>
+              </div>
+              
             </div>
             <div class="column">
-              <img src="https://cdn.theplaylist.net/wp-content/uploads/2023/02/13123714/INTLPoster_CREED3_2764x4096.jpg">
-              <img src="http://wearesecondunion.com/wp-content/uploads/2022/12/SFOTG-1140.png">
-              <img src="wedding.jpg">
-              <img src="mountainskies.jpg">
-              <img src="rocks.jpg">
-              <img src="underwater.jpg">
+              <div class="container">
+                <img src="https://cdn.theplaylist.net/wp-content/uploads/2023/02/13123714/INTLPoster_CREED3_2764x4096.jpg" alt="Avatar" class="image" >
+                <div class="middle">
+                  <a href="#" class="text">Book a Ticket</a>
+                </div>
+              </div>
+              <div class="container">
+                <img src="http://wearesecondunion.com/wp-content/uploads/2022/12/SFOTG-1140.png" alt="Avatar" class="image" >
+                <div class="middle">
+                  <a href="#" class="text">Book a Ticket</a>
+                </div>
+              </div>
+              <div class="container">
+                <img src="https://assets.voxcinemas.com/posters/P_HO00009130.jpg" alt="Avatar" class="image" >
+                <div class="middle">
+                  <a href="#" class="text">Book a Ticket</a>
+                </div>
+              </div>
             </div>
-            <div class="column">
-              <img src="wedding.jpg">
-              <img src="rocks.jpg">
-              <img src="falls2.jpg">
-              <img src="paris.jpg">
-              <img src="nature.jpg">
-              <img src="mist.jpg">
-              <img src="paris.jpg">
-            </div>
+          </div>
+          <div class="footer">
+
           </div>
       
     </body>
