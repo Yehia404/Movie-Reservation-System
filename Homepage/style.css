@@ -1,13 +1,34 @@
-body{
-  background-color:#262729;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
   
+}
+body{
+  font-family: "Effra",Tahoma,Arial,Helvetica,sans-serif;
+  line-height: 1.5;
+  color: #fff;
+  background-color:#262729;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/e1ef7321324953.562fffd8ebaaf.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff; 
 }
 /* ------------------------------------------------------- */
 .navbar {
   overflow: hidden;
   background-color: #333;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 25px;
 }
 
 .left {
@@ -43,7 +64,7 @@ body{
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-  background-color: red;
+  background-color: #da1083;
 }
 
 .dropdown-content {
@@ -71,79 +92,135 @@ body{
 .show {
   display: block;
 } 
-
-/* ------------------------------------------------------- */
-
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
+/* -------------WHAT'S ON -------------------- */
+.countiner .center { /* or absolute */
+ font-size: 20px;
+}
+.countiner h1 {
+  font-size: 20px;
+  margin: 20px;
+  padding: 10px;
   position: relative;
-  margin: auto;
-  
 }
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
+.countiner h1::after{
+  content: "";
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  width: 70px;
+  background-color: #da1083;
+}
+.countiner  .dashed{
+  border: 0.5px dashed #ffffff ;
+  margin-top: 30px;
+}
+
+
+.countiner article {
+  margin-bottom: 35px;
+  max-width: 300px;
+}
+.countiner article .language {
+  font-size: 13px;
+  padding: 10px 0 ;
+}
+.countiner .low {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 50px;
+  text-align: center;
+  margin: 50px;
+}
+.countiner article h3{
   font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  
+  padding: 15px;
 }
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.countiner .low article a img{
+    height: 400px;
+    width: 300px;
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.countiner  .plus12{
+  background: url(https://egy.voxcinemas.com/assets/images/movie/classification-white-12p-128x128.png)  no-repeat;
+  background-size: 34px 34px;
 }
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+.action {
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: .875rem;
+    font-weight: normal;
+    line-height: 2.3125rem;
+    margin: 0 15px 0 0;
+    padding: 0 20px;
+    position: relative;
+    text-decoration: none;
+    text-transform: capitalize;
+    vertical-align: middle;
+    user-select: none;
+    background-color: #da1083;
 }
-
-.active, .dot:hover {
-  background-color: #717171;
+.action:hover {
+  background-color: #84064e;
 }
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+/* FOOTER */
+footer {
+  background-color: #1b1b1d;
 }
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+footer .fot{
+  max-width: 1170px;
+  margin: auto;
+  padding: 30px 0;
 }
-
-/* ---------------------------------------------------------- */
-
-
+footer .fot h4{
+  font-size: 19px;
+  margin-bottom: 30px ;
+  text-transform: capitalize;
+  font-weight: 500;
+  position: relative;
+}
+footer .fot h4::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  width: 50px;
+  background-color: #da1083;
+}
+.fot {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+footer .fot ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+footer .fot ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  font-weight: 300;
+  color:#bbbb;
+  display: block;
+  transition:  all 0.3s ease;
+}
+footer .fot ul li a:hover{
+  color: #da1083;
+  padding-left: 7px;
+}
+footer .fot article .social a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color:#fff;
+    transition: all 0.3s ease;
+}
+footer .fot article .social a:hover{
+  color: #da1083;
+  background-color: #fff;
+}
