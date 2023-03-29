@@ -1,0 +1,118 @@
+video {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+}
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header{
+  position: relative;
+  color: white;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+  justify-content: center;
+  margin-right: 130px
+}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.login-title {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  color: #fff;
+  font-weight: lighter;
+  font-size: 1.5em;
+  margin-bottom: 7px;
+}
+
+.input-group input {
+  font-size: 1.5em;
+  padding: 0.1em 0.25em;
+  background-color: hsla(0, 100%, 91%, 0.3);
+  border: 1px solid hsl(201, 100%, 6%);
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: lighter;
+}
+
+.input-group input:focus {
+  border: 1px solid hsl(201, 100%, 50%);
+}
+
+.login-button {
+  padding: 10px 30px;
+  width: 100%;
+  border-radius: 5px;
+  background: hsla(201, 100%, 50%, 0.1);
+  border: 1px solid hsl(201, 100%, 50%);
+  outline: none;
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: lighter;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.Register-button {
+  display: inline-flex;
+  justify-content: center;
+  padding: 10px 30px;
+  width: 50%;
+  border-radius: 5px;
+  background: hsla(324, 94%, 50%, 0.1);
+  border: 1px solid hsl(137, 100%, 50%);
+  outline: none;
+  font-size: 1em;
+  color: #fff;
+  font-weight: lighter;
+  margin-top: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.login-button:hover {
+  background-color: hsla(201, 100%, 50%, 0.3);
+}
+
+.login-button:focus {
+  background-color: hsla(201, 100%, 50%, 0.5);
+}
+
+.Register-button:hover {
+  background-color: hsla(140, 100%, 50%, 0.3);
+}
+.Register-button:focus {
+  background-color: hsla(140, 100%, 50%, 0.3);
+}
