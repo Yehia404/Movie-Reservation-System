@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Form || Learning robo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/home/asu-logo.png">
+    <title>Contact Us</title>
     <link rel="stylesheet" href="style1.css" />
     <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
+      src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <div class="container">
+    <div id="nav-placeholder">
+
+    </div>
+    
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("navbar.html");
+    });
+    </script>
+   
+
+    <div class="contact">
       
       <div class="form">
         <div class="contact-info">
@@ -62,31 +73,27 @@
           <form action="index.html" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="input-container">
-              <input type="text" name="name" class="input" />
-              <label for="">Username</label>
-              <span>Username</span>
+              <input type="text" name="name" class="input" placeholder="Username">
             </div>
             <div class="input-container">
-              <input type="email" name="email" class="input" />
-              <label for="">Email</label>
-              <span>Email</span>
+              <input type="email" name="email" class="input" placeholder="Email" >
+              
             </div>
             <div class="input-container">
-              <input type="tel" name="phone" class="input" />
-              <label for="">Phone</label>
-              <span>Phone</span>
+              <input type="tel" name="phone" class="input" placeholder="Phone">
+              
             </div>
             <div class="input-container textarea">
-              <textarea name="message" class="input"></textarea>
-              <label for="">Message</label>
-              <span>Message</span>
+              <textarea name="message" class="input" placeholder="Message"></textarea>
+              
             </div>
-            <input type="submit" value="Send" class="btn" />
+            <input type="submit" value="Send" class="btn" >
+            <a class="home" href="/home/home.html">Back to homepage</a>
+          
           </form>
         </div>
       </div>
     </div>
-
-    <script src="script.js"></script>
+    
   </body>
 </html>

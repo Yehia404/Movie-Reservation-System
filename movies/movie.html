@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-<link href="style.css" rel="stylesheet">
-<link rel="stylesheet" href="normalize.css">
+      <link rel="icon" type="image/x-icon" href="/home/asu-logo.png">
+      <Title>Movies</Title>
+<link href="moviestyle.css" rel="stylesheet">
+<link href="/home/style.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script src="functions.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="navbar">
-            <a href="#home" class="left">Home</a>
-            <div class="dropdown">
-            <button class="dropbtn" onclick="myFunction()">Movies
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content" id="myDropdown">
-              <a href="#">What's On</a>
-              <a href="#">Coming Soon</a>
-            </div>
-            </div>
-            <a href="#contact" class="left">Contact Us</a>
-            <a href="#" class="right">Sign up</a>
-            <a href="#" class="right">Login</a>
-          </div>
-        <br>
+      <div id="nav-placeholder">
+
+      </div>
+      
+      <script>
+      $(function(){
+        $("#nav-placeholder").load("/shared/navbar.html");
+      });
+      </script>
 
         
         <!-- WHAT'S ON -->
@@ -55,7 +51,7 @@
                   </a>
                   <h3>Ana Le Habibi</h3>
                   <p logo></p>
-                  <p class="language"> <strong>Language:</strong> English</p>
+                  <p class="language"> <strong>Language:</strong> Arabic</p>
                   <a href="" class="action">Showtimes</a>
                 </article>
                 <article>
@@ -64,7 +60,7 @@
                   </a>
                   <h3>Akhi Fok El Shagara</h3>
                   <p logo></p>
-                  <p class="language"> <strong>Language:</strong> English</p>
+                  <p class="language"> <strong>Language:</strong> Arabic</p>
                   <a href="" class="action">Showtimes</a>
                 </article>
                 <article>
@@ -73,7 +69,7 @@
                   </a>
                   <h3>Nabil El Gamil Dr. Tagmeel</h3>
                   <p logo></p>
-                  <p class="language"> <strong>Language:</strong> English</p>
+                  <p class="language"> <strong>Language:</strong> Arabic</p>
                   <a href="" class="action">Showtimes</a>
                 </article>
                 <article>
@@ -127,7 +123,7 @@
                   </a>
                   <h3>Shalaby</h3>
                   <p logo></p>
-                  <p class="language"> <strong>Language:</strong> English</p>
+                  <p class="language"> <strong>Language:</strong> Arabic</p>
                   <a href="" class="action">Showtimes</a>
                 </article>
                 <article>
@@ -145,7 +141,7 @@
                   </a>
                   <h3>El Matareed</h3>
                   <p logo></p>
-                  <p class="language"> <strong>Language:</strong> English</p>
+                  <p class="language"> <strong>Language:</strong> Arabic</p>
                   <a href="" class="action">Showtimes</a>
                 </article>
                 <article>
@@ -169,57 +165,15 @@
               </div>
             </div>
                 <!-- footer -->
-            <footer>
-               <div class="fot">
-                <article>
-                  <h4>stay in touch</h4>
-                  <div class="social">
-                    <ul>
-                      <li>
-                      <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                        </li>
-                      <li>
-                          <a href=""><i class="fa-brands fa-twitter"></i></a>
-                      </li>
-                      <li>
-                          <a href=""><i class="fa-brands fa-youtube"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-                <nav role="navigation" class="na">
-                  <h4>About</h4>
-                  <ul>
-                    <li><a href="http://">Responsible Disclosure Policy</a></li>
-                    <li><a href="http://">About Us</a></li>
-                    <li><a href="http://">Contact Us </a></li>
-                    <li><a href="http://">Careers </a></li>
-                  </ul>
-                </nav>
-                <nav role="navigation" class="na">
-                  <h4>Help & Support</h4>
-                  <ul>
-                    <li class=""><a class="" href="">Refunds</a></li>
-                    <li class=""><a class="" href="">Privacy Policy</a></li>
-                    <li class=""><a class="" href="">Terms And Conditions</a></li>
-                    <li class=""><a class="" href="">Terms of Use</a></li>
-                    <li class=""><a class="" href="">Health &amp; Safety</a></li>
-                  </ul>
-                </nav>
-                <nav role="navigation" class="na">
-                  <h4>Explore Our Site</h4>
-                  <ul>
-                    <li class=""><a class="" href="">What&#39;s On</a></li>
-                    <li class=""><a class="" href="">Coming Soon</a></li>
-                    <li class=""><a class="" href="">Food Menus</a></li>
-                    <li class=""><a class="" href="">Pre-Order Online</a></li>
-                  </ul>
-                </nav>
-               </div>
-            </footer>
+                <div id="foot-placeholder">
+
+                </div>
+                
+                <script>
+                $(function(){
+                  $("#foot-placeholder").load("/shared/footer.html");
+                });
+                </script>
         
        
     </body>

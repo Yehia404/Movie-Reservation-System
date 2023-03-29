@@ -11,87 +11,11 @@ body{
   font-family: "Effra",Tahoma,Arial,Helvetica,sans-serif;
   line-height: 1.5;
   color: #fff;
-  background-color:#262729;
-  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/e1ef7321324953.562fffd8ebaaf.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: #fff; 
-}
+
+
 /* ------------------------------------------------------- */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-.left {
-  float: inline-start;
-}
-.right {
-  float: inline-end;
-}
-
-.navbar a {
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.dropdown {
-  float:inline-start;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  cursor: pointer;
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-  background-color: #da1083;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.show {
-  display: block;
-} 
 /* -------------WHAT'S ON -------------------- */
 .countiner .center { /* or absolute */
  font-size: 20px;
@@ -159,6 +83,7 @@ a {
     vertical-align: middle;
     user-select: none;
     background-color: #da1083;
+    color:white;
 }
 .action:hover {
   background-color: #84064e;
@@ -166,6 +91,10 @@ a {
 /* FOOTER */
 footer {
   background-color: #1b1b1d;
+  margin-top: 80px;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
 }
 footer .fot{
   max-width: 1170px;
