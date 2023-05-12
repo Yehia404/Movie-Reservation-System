@@ -1,0 +1,38 @@
+{% extends 'reserve/basea.html' %}
+
+{% block my_block %}
+<h1 class="on">Admin Page</h1>
+<hr class="online">
+    <div class="rowb">
+        <div class="columnb leftb">
+            
+            <br>
+            <br>
+            <a class="action" href="{%url 'customers-create' %}" style="margin-left:200px;">Create Customer</a>
+            <a class="action" href="{%url 'customers-list' %}" >View Customers</a>
+        </div>
+        
+        <div class="columnb rightb">
+        {% block content %}
+
+
+
+
+        {% endblock %}
+        </div>
+        
+      </div>    
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+

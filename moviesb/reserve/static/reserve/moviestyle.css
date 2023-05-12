@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+  
+}
+body{
+  font-family: "Effra",Tahoma,Arial,Helvetica,sans-serif;
+  line-height: 1.5;
+  color: #fff;
+}
+
+
+/* ------------------------------------------------------- */
+
+/* -------------WHAT'S ON -------------------- */
+.countiner .center { /* or absolute */
+ font-size: 20px;
+}
+.countiner h1 {
+  font-size: 20px;
+  margin: 20px;
+  padding: 10px;
+  position: relative;
+}
+.countiner h1::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  width: 70px;
+  background-color: #da1083;
+}
+.countiner  .dashed{
+  border: 0.5px dashed #ffffff ;
+  margin-top: 30px;
+}
+
+
+.countiner article {
+  margin-bottom: 35px;
+  max-width: 300px;
+}
+.countiner article .language {
+  font-size: 13px;
+  padding: 10px 0 ;
+}
+.countiner .low {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 50px;
+  text-align: center;
+  margin: 50px;
+}
+.countiner article h3{
+  font-size: 18px;
+  padding: 15px;
+}
+.countiner .low article a img{
+    height: 400px;
+    width: 300px;
+}
+.countiner  .plus12{
+  background: url(https://egy.voxcinemas.com/assets/images/movie/classification-white-12p-128x128.png)  no-repeat;
+  background-size: 34px 34px;
+}
+.action {
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: .875rem;
+    font-weight: normal;
+    line-height: 2.3125rem;
+    margin: 0 15px 0 0;
+    padding: 0 20px;
+    position: relative;
+    text-decoration: none;
+    text-transform: capitalize;
+    vertical-align: middle;
+    user-select: none;
+    background-color: #da1083;
+    color:white;
+}
+.action:hover {
+  background-color: #84064e;
+}
+/* FOOTER */
+footer {
+  background-color: #1b1b1d;
+  margin-top: 80px;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+footer .fot{
+  max-width: 1170px;
+  margin: auto;
+  padding: 30px 0;
+}
+footer .fot h4{
+  font-size: 19px;
+  margin-bottom: 30px ;
+  text-transform: capitalize;
+  font-weight: 500;
+  position: relative;
+}
+footer .fot h4::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  width: 50px;
+  background-color: #da1083;
+}
+.fot {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+footer .fot ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+footer .fot ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  font-weight: 300;
+  color:#bbbb;
+  display: block;
+  transition:  all 0.3s ease;
+}
+footer .fot ul li a:hover{
+  color: #da1083;
+  padding-left: 7px;
+}
+footer .fot article .social a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color:#fff;
+    transition: all 0.3s ease;
+}
+footer .fot article .social a:hover{
+  color: #da1083;
+  background-color: #fff;
+}

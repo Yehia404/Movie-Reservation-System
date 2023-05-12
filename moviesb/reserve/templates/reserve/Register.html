@@ -1,0 +1,48 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="icon" type="image/x-icon" href="{%  static 'reserve/favicon.png' %}">
+      <title>Register</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{%  static 'reserve/Register.css' %}" rel="stylesheet">
+<script src="{%  static 'reserve/Register.cjs' %}"></script>
+    </head>
+    <body>
+      
+   <!-- The video -->
+<video autoplay loop id="myVideo">
+    <source src="https://player.vimeo.com/external/553309525.sd.mp4?s=442ec7c36d0a3e834b294625875800d1cc13790c&profile_id=164&oauth2_token_id=57447761">
+  </video>
+  
+  <!-- Optional: some overlay text to describe the video -->
+  <img src="{%  static 'reserve/asu-logo.png' %}" alt="logo" width="180em" height="130em" style="justify-content: center;">
+    <div class="testbox">
+      <h1 style="color: #ffffff;"><strong>Registration</strong></h1>
+    
+      <form action="/">
+          <hr>
+        <div class="accounttype">
+          <input type="radio" value="None" id="radioOne" name="account" checked/>
+          <input type="radio" value="None" id="radioTwo" name="account" />
+        </div>
+      <hr>
+      <label id="icon" for="name"><i class="icon-envelope "></i></label>
+      <input type="text" name="name" id="name" placeholder="Email" required/>
+      <label id="icon" for="name"><i class="icon-user"></i></label>
+      <input type="text" name="name" id="name" placeholder="Name" required/>
+      <label id="icon" for="name"><i class="icon-shield"></i></label>
+      <input type="password" name="name" id="name" placeholder="Password" required/>
+      <div class="gender">
+        <input type="radio" value="None" id="male" name="gender" checked/>
+        <label for="male" class="radio" chec>Male</label>
+        <input type="radio" value="None" id="female" name="gender" />
+        <label for="female" class="radio">Female</label>
+       </div> 
+       <p style="color: white;">By clicking Register, you agree on our <a style="color: #ffffff;" href="#" >terms and condition</a>.</p>
+       <a href="#" class="button">Register</a>
+      </form>
+    </div>
+  </body>
