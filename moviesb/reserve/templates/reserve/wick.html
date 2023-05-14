@@ -1,0 +1,55 @@
+{% extends 'reserve/base.html' %}
+{% load static %}
+
+
+{% block head %}
+
+
+<title>John Wick 4</title>
+<link href="{%  static 'reserve/bookstyle.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+{% block my_block %}
+<div class="rowb">
+  <div class="columnb leftb">
+    
+    <img src="https://assets.voxcinemas.com/posters/P_HO00009444.jpg" >
+  </div>
+  
+  <div class="columnb rightb">
+    <h1>John Wick: Chapter 4</h1>
+    <br>
+    <hr class="line">
+    <br>
+    <br>
+    
+    <ul>
+      <li>Genre: Action</li>
+      <li>Running Time: 170 min</li>
+      <li>Release Date: 14 April 2023</li>
+      <li>Starring: Keanu Reeves, Donnie Yen, Alexander Skarsgård</li>
+      <li>Language: English</li>
+    </ul>
+    <br>
+    <br>
+    <p>John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.</p>
+    <br>
+    <h1>Showtimes</h1>
+    <br>
+    <hr class="line">
+  <br>
+    <a href="{%url 'seats' %}" class="btns">3:15 pm</a>
+    <a href="{%url 'seats' %}" class="btns">5:30 pm</a>
+    <a href="{%url 'seats' %}" class="btns">7:45 pm</a>
+    <br>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qEVUtrk8_B4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+  </div>
+  
+</div>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,55 @@
+{% extends 'reserve/base.html' %}
+{% load static %}
+
+
+{% block head %}
+
+
+<title>Shazam! Fury Of The Kings</title>
+<link href="{%  static 'reserve/bookstyle.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+{% block my_block %}
+<div class="rowb">
+  <div class="columnb leftb">
+    
+    <img src="https://assets.voxcinemas.com/posters/P_HO00009442.jpg" >
+  </div>
+  
+  <div class="columnb rightb">
+    <h1>Shazam! Fury Of The Kings</h1>
+    <br>
+    <hr class="line">
+    <br>
+    <br>
+    
+    <ul>
+      <li>Genre: Action</li>
+      <li>Running Time: 130 min</li>
+      <li>Release Date: 15 March 2023</li>
+      <li>Starring: Zachary Levi, Diedrich Bader, Grace Caroline Currey</li>
+      <li>Language: English</li>
+    </ul>
+    <br>
+    <br>
+    <p>The film continues the story of teenage Billy Batson who, upon reciting the magic word "SHAZAM!" is transformed into his adult Super Hero alter ego, Shazam.</p>
+    <br>
+    <h1>Showtimes</h1>
+    <br>
+    <hr class="line">
+  <br>
+    <a href="{%url 'seats' %}" class="btns">3:15 pm</a>
+    <a href="{%url 'seats' %}" class="btns">5:30 pm</a>
+    <a href="{%url 'seats' %}" class="btns">7:45 pm</a>
+    <br>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/T7CDwd2hpSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+  </div>
+  
+</div>
+{% endblock %}
+
+
+
+

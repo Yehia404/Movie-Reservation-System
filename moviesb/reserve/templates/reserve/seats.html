@@ -122,7 +122,12 @@
   
     <p class="text">You have selected <span id="count">0</span> seats for a price of EGP <span id="total">0</span></p>
     <script src="{%  static 'reserve/seats.js' %}"></script>
+    <div >
+    <a href="{% url 'home'%}" class="action" style="margin-right: 800px;">Cancel Booking</a>
+    <a href="#" class="action">Confrim Booking</a>
+    </div>
   </div>
+  
 {% endblock %}
 
 

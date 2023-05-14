@@ -21,3 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('reserve.urls')),
 ]
+
+admin.site.site_header  =  "ASU Cinema Adminstration"  
+

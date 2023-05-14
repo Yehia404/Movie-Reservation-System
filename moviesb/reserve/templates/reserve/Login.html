@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <link rel="icon" type="image/x-icon" href="{%  static 'reserve/favicion.png' %}">
+      <link rel="icon" type="image/x-icon" href="{%  static 'reserve/favicon.png' %}">
       <title>Login</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="{%  static 'reserve/Login.css' %}" rel="stylesheet">
@@ -19,17 +19,18 @@
   
  <h3 class="login-title">Welcome</h3>
   <div class="header">
-   <form>
+   <form method="POST">
+    {% csrf_token %}
           <div class="input-group">
             <label>Email</label>
-            <input type="email" />
+            <input name="email" type="email" />
           </div>
           <div class="input-group">
             <label>Password</label>
-            <input type="password" />
+            <input name="password" type="password" />
           </div>
           <button type="submit" class="login-button">Sign In</button>
-          <a href="{%url 'register' %}" class="Register-button">Register</a>
+          <a href="{%url 'customers-create' %}" class="Register-button">Register</a>
         </form>
   </div>
 </div>

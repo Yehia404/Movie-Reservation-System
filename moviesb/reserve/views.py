@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
+from django.contrib.auth import authenticate,login,logout
+from django.contrib import messages
 from django.views.generic import (
 ListView,
 CreateView,
@@ -13,12 +15,40 @@ def home(request):
     return render(request,'reserve/home.html')
 def movies(request):
     return render(request,'reserve/movie.html')
-def booking(request):
-    return render(request,'reserve/booking.html')
+def creed(request):
+    return render(request,'reserve/creed.html')
+def shazam(request):
+    return render(request,'reserve/shazam.html')
+def avatar(request):
+    return render(request,'reserve/avatar.html')
+def wick(request):
+    return render(request,'reserve/wick.html')
+def ant(request):
+    return render(request,'reserve/antman.html')
+def maneater(request):
+    return render(request,'reserve/maneater.html')
 def seats(request):
     return render(request,'reserve/seats.html')
+
+
+
 def login(request):
-    return render(request,'reserve/Login.html')
+
+    # email = request.POST["email"]
+    # password = request.POST["password"]
+    
+    # customers=customer.objects.all()
+    # for obj in customers:
+    #     if obj.email == email and obj.password == password :
+    #         return render(request,'reserve/home.html/<int:pk>')
+
+        return render(request,'reserve/Login.html')
+
+
+
+
+
+
 def register(request):
     return render(request,'reserve/Register.html')
 def contact(request):
@@ -35,6 +65,7 @@ class CustomerListView(ListView):
 class CustomerCreateView(CreateView):
     model= customer
     fields=['firstName','lastName','email','phoneNumber','password']
+    
 
 class CustomerUpdateView(UpdateView):
     model= customer    
