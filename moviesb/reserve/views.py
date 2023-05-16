@@ -9,6 +9,7 @@ DeleteView
 )
 from .models import customer
 from django.urls import reverse_lazy, reverse
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -78,6 +79,29 @@ def contact(request):
 def admin(request):
     return render(request,'reserve/admin.html')
 
+# def book_movie(request):
+#     if request.is_ajax() and request.method == 'POST':
+#         movie_id = request.POST.get('movie_id')
+#         time = request.POST.get('time')
+#         seats = request.POST.get('seats')
+        
+#         # save data to customer model
+#         customer = request.user.customer # assuming you have a customer model with a foreign key to the user model
+#         customer.movie = movie_id
+#         customer.time = time
+#         customer.seats = seats
+#         customer.save()
+        
+#         # update seats availability in database
+#         # assuming you have a seats model with a foreign key to the movie model
+#         movie = Movie.objects.get(id=movie_id)
+#         for seat in seats:
+#             movie.seats.get(name=seat).available = False
+#             movie.seats.get(name=seat).save()
+        
+#         return JsonResponse({'success': True})
+#     else:
+#         return JsonResponse({'success': False})
 
 
 class CustomerListView(ListView):

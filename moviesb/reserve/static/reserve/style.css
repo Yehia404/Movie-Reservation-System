@@ -202,7 +202,7 @@ header .header-right .resp div {
 }
 
 .mySlides:first-of-type {
-  display: block;
+  display:block;
  }
 
 /* Next & previous buttons */

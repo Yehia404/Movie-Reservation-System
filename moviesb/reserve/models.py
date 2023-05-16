@@ -27,9 +27,17 @@ class movie(models.Model):
     
 
 class Seat(models.Model):
-    seatNo=models.CharField(max_length=2,validators=[MinLengthValidator(2)])
+    seatNo=models.CharField(max_length=3,validators=[MinLengthValidator(2)])
     occupied=models.BooleanField(default=False)
 
     def __str__(self) -> str:
         return self.seatNo
+    
+class booking(models.Model):
+    Customer=models.ManyToManyField('customer',null=True,blank=True)
+    Day=models.CharField(max_length=9)
+    time=models.CharField(max_length=7,validators=[MinLengthValidator(7)])    
+    Movie=models.ManyToManyField('movie',null=True,blank=True)
+
+    
 
