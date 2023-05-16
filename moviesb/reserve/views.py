@@ -33,20 +33,23 @@ def seats(request):
 
 
 def login(request):
-
-    # email = request.POST["email"]
-    # password = request.POST["password"]
+    if request.method== "POST":
+        email = request.POST["email"]
+        password = request.POST["password"]
+        pk=customer.objects.filter(email,password).values(id)
+        # return render(request,'reserve/home.html/')
+    
     
     # customers=customer.objects.all()
     # for obj in customers:
     #     if obj.email == email and obj.password == password :
     #         return render(request,'reserve/home.html/<int:pk>')
-
-        return render(request,'reserve/Login.html')
-
-
+    else:
+        return render(request,'reserve/Login.html/')
 
 
+pk=login
+print (pk)
 
 
 def register(request):
