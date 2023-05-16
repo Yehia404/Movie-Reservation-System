@@ -201,6 +201,10 @@ header .header-right .resp div {
   display:none;
 }
 
+.mySlides:first-of-type {
+  display: block;
+ }
+
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;

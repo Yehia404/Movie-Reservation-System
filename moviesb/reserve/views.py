@@ -8,8 +8,21 @@ UpdateView,
 DeleteView
 )
 from .models import customer
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
+
 # Create your views here.
+
+
+def authenticate(email=None,password=None,**kwargs):
+    try:
+        Customer=customer.objects.get(email=email,password=password)
+        return Customer
+    except customer.DoesNotExist:
+        return None
+    
+
+
+
 
 def home(request):
     return render(request,'reserve/home.html')
@@ -36,20 +49,26 @@ def login(request):
     if request.method== "POST":
         email = request.POST["email"]
         password = request.POST["password"]
-        pk=customer.objects.filter(email,password).values(id)
-        # return render(request,'reserve/home.html/')
+        user=authenticate(email=email,password=password)
+        
     
+        if user is not None:
+            global Customer
+            Customer=user
+            msg=f"Hello {Customer.firstName} {Customer.lastName}"
+            return  render(request,'reserve/home.html',{
+                "msg":msg
+            })
+        else:
+            msg="Invalid Email or Password"
+            return render(request,'reserve/Login.html',{
+            "msg": msg
+             })
     
-    # customers=customer.objects.all()
-    # for obj in customers:
-    #     if obj.email == email and obj.password == password :
-    #         return render(request,'reserve/home.html/<int:pk>')
-    else:
-        return render(request,'reserve/Login.html/')
+    return render(request,'reserve/Login.html/')
 
 
-pk=login
-print (pk)
+
 
 
 def register(request):
