@@ -39,5 +39,11 @@ class booking(models.Model):
     time=models.CharField(max_length=7,validators=[MinLengthValidator(7)])    
     Movie=models.ManyToManyField('movie',null=True,blank=True)
 
-    
+class contact(models.Model):
+    name=models.CharField(max_length=100)
+    email=models.EmailField(max_length=100)    
+    phoneNumber= models.CharField(max_length=11,validators=[MinLengthValidator(11)])
+    message=models.CharField(max_length=500)
 
+    def __str__(self) -> str:
+        return self.name

@@ -7,7 +7,7 @@ CreateView,
 UpdateView,
 DeleteView
 )
-from .models import customer
+from .models import customer,contact
 from django.urls import reverse_lazy, reverse
 from django.http import JsonResponse
 
@@ -74,7 +74,32 @@ def login(request):
 
 def register(request):
     return render(request,'reserve/Register.html')
-def contact(request):
+def contact_us(request):
+    if request.method == 'POST':
+        # Get the form data
+        name = request.POST['name']
+        email = request.POST['email']
+        phone_number = request.POST['phonenumber']
+        message = request.POST['message']
+
+        # Create a new Customer object and save it to the database
+        Contact = contact(name=name,email=email,phoneNumber=phone_number,message=message)
+        Contact.save()
+        msg="Contact Form Submitted"
+        # Redirect to a success page
+        return render(request,'reserve/home.html',{
+            "msg":msg
+        })
+
+    # If the request method is GET, just show the signup form
+    return render(request, 'reserve/contact.html')
+
+
+
+
+
+
+
     return render(request,'reserve/contact.html')
 def admin(request):
     return render(request,'reserve/admin.html')

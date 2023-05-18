@@ -19,7 +19,7 @@ urlpatterns = [
     path('seats/',views.seats,name="seats"),
     path('login/',views.login,name="login"),
     path('register/',views.register,name="register"),
-    path('contact/',views.contact,name="contact"),
+    path('contact/',views.contact_us,name="contact"),
     
 
 
