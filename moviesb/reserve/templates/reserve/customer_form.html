@@ -1,0 +1,70 @@
+{% extends 'reserve/Register.html' %}
+{% block content %}
+
+{% load crispy_forms_tags %}
+<form class="mt-3" method="POST">
+{% csrf_token %}
+<fieldset>
+<legend></legend>
+<!-- {{ form|crispy }} -->
+
+
+<hr>
+<div id="div_id_firstName" class="mb-3">
+      <label for="id_firstName" class="form-label requiredField">FirstName<span class="asteriskField">*</span></label>
+      <div>
+      <label id="icon" for="name"><i class="icon-user"></i></label>
+      <input type="text" name="firstName" maxlength="100" class="textinput form-control" required_id="id_firstName" placeholder="First Name" required/>
+      </div>
+</div>
+<div id="div_id_lastName" class="mb-3"> 
+<label for="id_lastName" class="form-label requiredField">LastName<span class="asteriskField">*</span> </label>
+      <div>
+      <label id="icon" for="name"><i class="icon-user"></i></label>
+      <input type="text" name="lastName" maxlength="100" class="textinput form-control" required id="id_lastName" placeholder="Last Name" required/> </div>
+      </div>
+<div id="div_id_email" class="mb-3"> <label for="id_email" class="form-label requiredField">Email<span class="asteriskField">*</span> </label>
+      <div> 
+      <label id="icon" for="name"><i class="icon-envelope "></i></label>
+      <input style="height: 40px; width: 200px; margin-left: -5px;" type="email" name="email" maxlength="100" class="emailinput form-control" required id="id_email" placeholder="Email" required/>
+      </div>
+</div>
+<div id="div_id_phoneNumber" class="mb-3"> <label for="id_phoneNumber" class="form-label requiredField">PhoneNumber<span class="asteriskField">*</span> </label>
+      <div>
+      <label id="icon" for="name"><i class="icon-user"></i></label>
+      <input type="text" name="phoneNumber" maxlength="11" minlength="11" class="textinput form-control" required id="id_phoneNumber" placeholder="Phone Number" required/>
+      </div>
+</div>
+<div id="div_id_password" class="mb-3"> <label for="id_password" class="form-label requiredField">Password<span class="asteriskField">*</span> </label>  
+      <div>   
+      <label id="icon" for="name"><i class="icon-shield"></i></label>
+      <input type="password" name="password" maxlength="100" class="textinput form-control" required id="id_password" placeholder="Password" required/> 
+      </div> 
+</div>
+       <p style="color: white;">By clicking Register, you agree on our <a style="color: #ffffff;" href="#" >terms and condition</a>.</p>
+       <button type="submit" class="action" style="border-color: #da1083; padding: 5px; border-radius: 10px; margin-left: 20px; width:70px; " >Register</button>
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</fieldset>
+<div>
+<!-- <button type="submit" class="btn btn-primary" >Register</button> -->
+</div>
+</form>
+
+{% endblock %}

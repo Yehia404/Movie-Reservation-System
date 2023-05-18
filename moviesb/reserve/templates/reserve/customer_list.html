@@ -1,0 +1,17 @@
+{% extends 'reserve/admin.html' %}
+
+{% block content %}
+{% for customer in customers %}
+<h1> First Name: {{customer.firstName}}</h1>
+<h1> Last Name: {{customer.lastName}}</h1>
+<h1> Email: {{customer.email}}</h1>
+<h1> Phone Number: {{customer.phoneNumber}}</h1>
+<h1> Password: {{customer.password}}</h1>
+<a class="btn btn-md btn-secondary" href="{% url 'customers-update' customer.id %}">Update</a>
+<a class="btn btn-md btn-danger" href="{% url 'customers-delete' customer.id %}">Delete</a>
+<br>
+{% endfor %}
+
+
+
+{% endblock %}

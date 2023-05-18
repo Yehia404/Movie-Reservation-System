@@ -1,0 +1,161 @@
+{% extends 'reserve/base.html' %}
+{% block head %}
+<title>Movies</title>
+{% endblock %}
+      
+
+
+{% block my_block %}
+<!-- WHAT'S ON -->
+<div class="countiner">
+  <h1 class="center">WHAT'S ON</h1>
+  <hr class="dashed">
+<div class="low">
+  <article>
+    <a href="{%url 'creed' %}">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00009439.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>Creed III</h3>
+    <span class="plus12"></span>
+    <p class="language"> <strong>Language:</strong> English</p>
+    <a href="{%url 'creed' %}" class="action">Showtimes</a>
+  </article>
+  <article>
+    <a href="{%url 'shazam' %}">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00009442.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>Shazam! Fury Of The Kings</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> English</p>
+    <a href="{%url 'shazam' %}" class="action">Showtimes</a>
+  </article>
+  <article>
+    <a href="{% url 'avatar' %}">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00009130.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>Avatar: The Way of Water</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> English</p>
+    <a href="{% url 'avatar' %}" class="action">Showtimes</a>
+  </article>
+  <article>
+    <a href="{% url 'wick' %}">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00009444.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>John Wick: Chapter 4</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> English</p>
+    <a href="{% url 'wick' %}" class="action">Showtimes</a>
+  </article>
+    <article>
+      <a href="{%url 'ant' %}">
+        <img src="https://assets.voxcinemas.com/posters/P_HO00009436.jpg" alt="" srcset="" width="200px" height="200px">
+      </a>
+      <h3>Ant-Man and the Wasp: Quantumania</h3>
+      <p logo></p>
+      <p class="language"> <strong>Language:</strong> English</p>
+      <a href="{%url 'ant' %}" class="action">Showtimes</a>
+    </article>
+  <article>
+    <a href="">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00009341.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>Akhi Fok El Shagara</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> Arabic</p>
+    <a href="" class="action">Showtimes</a>
+  </article>
+  <article>
+    <a href="">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00009956.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>Nabil El Gamil Dr. Tagmeel</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> Arabic</p>
+    <a href="" class="action">Showtimes</a>
+  </article>
+  <article>
+    <a href="{% url 'maneater' %}">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00010061.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>Maneater</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> English</p>
+    <a href="{% url 'maneater' %}" class="action">Showtimes</a>
+  </article>
+  <article>
+    <a href="">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00009984.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>Plane</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> English</p>
+    <a href="" class="action">Showtimes</a>
+  </article>
+  <article>
+    <a href="">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00009943.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>Mummies</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> English</p>
+    <a href="" class="action">Showtimes</a>
+  </article>
+  <article>
+    <a href="">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00010030.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>Ana Le Habibi</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> Arabic</p>
+    <a href="" class="action">Showtimes</a>
+  </article>
+  <article>
+    <a href="">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00010081.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>Missing</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> English</p>
+    <a href="" class="action">Showtimes</a>
+  </article>
+  <article>
+    <a href="">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00009427.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>Shalaby</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> Arabic</p>
+    <a href="" class="action">Showtimes</a>
+  </article>
+  <article>
+    <a href="">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00008811.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>Operation Fortune: Ruse De Guerre</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> English</p>
+    <a href="" class="action">Showtimes</a>
+  </article>
+  <article>
+    <a href="">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00009996.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>El Matareed</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> Arabic</p>
+    <a href="" class="action">Showtimes</a>
+  </article>
+  <article>
+    <a href="">
+      <img src="https://assets.voxcinemas.com/posters/P_HO00009487.jpg" alt="" srcset="" width="200px" height="200px">
+    </a>
+    <h3>65</h3>
+    <p logo></p>
+    <p class="language"> <strong>Language:</strong> English</p>
+    <a href="" class="action">Showtimes</a>
+  </article>
+</div>
+</div>
+      
+{% endblock %}

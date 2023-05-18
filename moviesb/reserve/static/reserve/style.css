@@ -195,14 +195,15 @@ header .header-right .resp div {
   
   
 }
-.myslides:first-of-type {
-  display: block;
- }
+
 /* Hide the images by default */
 .mySlides {
   display:none;
 }
 
+.mySlides:first-of-type {
+  display:block;
+ }
 
 /* Next & previous buttons */
 .prev, .next {

@@ -1,0 +1,87 @@
+{% extends 'reserve/base.html' %}
+{% block head %}
+<title>ASU Cinema</title>
+{% endblock %}
+{% block my_block %}
+
+<h1 style="text-align: center; margin-top: 10px;">{{msg}}</h1>
+<div class="slideshow-container">
+  
+  <div class="mySlides fade">
+    <a href="{% url 'shazam'%}"><img src="http://wearesecondunion.com/wp-content/uploads/2022/12/SFOTG-1140.png" style="width:100%"></a>
+  </div>
+  
+    <div class="mySlides fade">
+      <a href="{% url 'wick'%}"><img src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/01/john-wick-4-total-film-social-featured.jpg" style="width:100%"></a>
+    </div>
+  
+    <div class="mySlides fade">
+      <a href="{% url 'creed'%}"><img src="https://www.showbiz411.com/wp-content/uploads/2023/03/Yellow-Photo-Food-Challenge-YouTube-Thumbnail-2.jpg" style="width:100%"></a>
+     </div>
+  
+  
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</div>
+  <br>
+  <br>
+  <hr>
+
+  <h1 class="on">What's On</h1>
+  <hr class="online">
+  <div class="row">
+    <div class="column">
+      <div class="container">
+        <img src="https://wallpapercave.com/wp/wp11345410.jpg" alt="Avatar" class="image" >
+        <div class="middle">
+          <a href="{%url 'wick' %}" class="text">Book a Ticket</a>
+        </div>
+      </div>
+      <div class="container">
+        <img src="https://assets.voxcinemas.com/posters/P_HO00009436.jpg" alt="Avatar" class="image" width="200" height="400">
+        <div class="middle">
+          <a href="{%url 'ant' %}" class="text">Book a Ticket</a>
+        </div>
+      </div>
+      <div class="container">
+        <img src="https://assets.voxcinemas.com/posters/P_HO00010061.jpg" alt="Avatar" class="image" width="200" height="300" >
+        <div class="middle">
+          <a href="{% url 'maneater' %}" class="text">Book a Ticket</a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="column">
+      <div class="container">
+        <img src="https://cdn.theplaylist.net/wp-content/uploads/2023/02/13123714/INTLPoster_CREED3_2764x4096.jpg" alt="Avatar" class="image" >
+        <div class="middle">
+          <a href="{%url 'creed' %}" class="text">Book a Ticket</a>
+        </div>
+      </div>
+      <div class="container">
+        <img src="http://wearesecondunion.com/wp-content/uploads/2022/12/SFOTG-1140.png" alt="Avatar" class="image" >
+        <div class="middle">
+          <a href="{%url 'shazam' %}" class="text">Book a Ticket</a>
+        </div>
+      </div>
+      <div class="container">
+        <img src="https://assets.voxcinemas.com/posters/P_HO00009130.jpg" alt="Avatar" class="image" >
+        <div class="middle">
+          <a href="{%url 'avatar' %}" class="text">Book a Ticket</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

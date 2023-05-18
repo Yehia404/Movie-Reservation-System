@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="icon" type="image/x-icon" href="{% static 'reserve/favicon.png' %}">
+      <title>Admin Page</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="{% static 'reserve/adminstyle.css' %}" rel="stylesheet">
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+<link href="{% static 'reserve/style.css' %}" rel="stylesheet">
+<link href="{% static 'reserve/moviestyle.css' %}" rel="stylesheet">
+<link href="{% static 'reserve/bookstyle.css' %}" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-left">
+                <div class="logo">
+                    <a href="{%url 'admin-home' %}"><img src="{% static 'reserve/asu-logo.png' %}" alt="logo"></a>
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li>
+                            <a href="{%url 'admin-home' %}" class="active">Home</a>
+                        </li>
+                        <li>
+                          <a href="">Database</a>
+                        </li>
+                        
+                        
+                    </ul>
+                    <!-- <div class="search-container">
+                        <form action="/action_page.php">
+                          <input type="text" placeholder="Search.." name="search">
+                          <button type="submit"><i class="fa fa-search"></i></button> -->
+                    <div class="login-signup">
+                        <a href="/login/Login.html">Login</a> or <a href="/login/Register.html">Signup</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="login-signup">
+                    <a href="/login/Login.html">Login</a>
+                    <a href="/login/Register.html">Signup</a>
+                </div>
+                <div class="resp">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </header>
+        <script>
+          resp = document.querySelector(".resp");
+            nav = document.querySelector("nav");
+            resp.onclick = function() {
+                nav.classList.toggle("active");
+            }
+        </script>
+      {% block my_block %}
+
+      
+      {% endblock %}
+      
+
+        
+      <!-- <footer>
+        <div class="fot">
+         <article>
+           <h4>stay in touch</h4>
+           <div class="social">
+             <ul>
+               <li>
+               <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+               </li>
+               <li>
+                 <a href=""><i class="fa-brands fa-instagram"></i></a>
+                 </li>
+               <li>
+                   <a href=""><i class="fa-brands fa-twitter"></i></a>
+               </li>
+               <li>
+                   <a href=""><i class="fa-brands fa-youtube"></i></a>
+               </li>
+             </ul>
+           </div>
+         </article>
+         <nav role="navigation" class="na">
+           <h4>About</h4>
+           <ul>
+             <li><a href="http://">About Us</a></li>
+             <li><a href="http://"></a></li>
+             <li><a href="http://"> </a></li>
+             <li><a href="http://"> </a></li>
+           </ul>
+         </nav>
+         <nav role="navigation" class="na">
+           <h4>Help & Support</h4>
+           <ul>
+             <li class=""><a class="" href="/contact/contact.html">Contact Us</a></li>
+             <li class=""><a class="" href="">Refunds</a></li>
+             <li class=""><a class="" href="">Privacy Policy</a></li>
+             <li class=""><a class="" href="">Terms And Conditions</a></li>
+             <li class=""><a class="" href="">Terms of Use</a></li>
+           </ul>
+         </nav>
+         <nav role="navigation" class="na">
+           <h4>Explore Our Site</h4>
+           <ul>
+             <li class=""><a class="" href="/movies/movie.html">What&#39;s On</a></li>
+             <li class=""><a class="" href="">Coming Soon</a></li>
+             <li class=""><a class="" href=""></a></li>
+             <li class=""><a class="" href=""></a></li>
+           </ul>
+         </nav>
+        </div>
+     </footer> -->
+          
+      
+    </body>
+</html>
