@@ -1,6 +1,6 @@
 {% extends 'reserve/base.html' %}
 {% load static %}
-
+  {% comment %} choose the seats you want  {% endcomment %}
 {% block head %}
 <title>Seating Plan</title>
 <link href="{%  static 'reserve/seatstyle.css' %}" rel="stylesheet">
@@ -104,7 +104,7 @@
   </div>
   </div>
   
-  
+   {% comment %} see if the seats are  Available or not {% endcomment %}
   <ul class="showcase">
       <li>
         <div class="seat"></div>
