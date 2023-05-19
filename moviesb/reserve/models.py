@@ -34,10 +34,13 @@ class Seat(models.Model):
         return self.seatNo
     
 class booking(models.Model):
-    Customer=models.ManyToManyField('customer',null=True,blank=True)
+    Customer=models.ManyToManyField(customer,null=True,blank=True)
     Day=models.CharField(max_length=9)
     time=models.CharField(max_length=7,validators=[MinLengthValidator(7)])    
-    Movie=models.ManyToManyField('movie',null=True,blank=True)
+    movieName=models.CharField(max_length=30)
+    seats=models.CharField(max_length=70, default="0")
+    price=models.PositiveIntegerField()
+
 
 class contact(models.Model):
     name=models.CharField(max_length=100)
