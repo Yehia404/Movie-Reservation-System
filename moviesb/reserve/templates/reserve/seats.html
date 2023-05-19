@@ -4,33 +4,46 @@
 {% block head %}
 <title>Seating Plan</title>
 <link href="{%  static 'reserve/seatstyle.css' %}" rel="stylesheet">
+<link href="{%  static 'reserve/bookstyle.css' %}" rel="stylesheet">
+
 {% endblock %}
 
 {% block my_block %}
 <div class="body1">
-
+  <h1>Showtimes</h1>
+  <div style="margin-top: 20px;">
+    <a   id="sun"style="cursor: pointer;" onclick="sun()" class="btns">Sunday</a>
+    <a   id="tue"style="cursor: pointer;"onclick="tue()"class="btns">Tuesday</a>
+    <a   id="thurs"style="cursor: pointer;"onclick="thurs()"class="btns">Thursday</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a  id="first"style="cursor: pointer;" onclick="first()" class="btns">3:15 pm</a>
+    <a  id="sec"style="cursor: pointer;" onclick="sec()" class="btns">5:30 pm</a>
+    <a  id="thir"style="cursor: pointer;" onclick="thir()" class="btns">7:45 pm</a>
+  </div>
+  
   <div class="movie-screen"></div>
   
   <div class="movie-seats">
     <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat occupied"></div>
-        <div class="seat occupied"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
+        <div class="seat" value="A1"></div>
+        <div class="seat" value="A2"></div>
+        <div class="seat" Value="A3"></div>
+        <div class="seat occupied" Value="A4"></div>
+        <div class="seat occupied" Value="A5"></div>
+        <div class="seat" Value="A6"></div>
+        <div class="seat" Value="A7"></div>
+        <div class="seat" Value="A8"></div>
     </div>
     <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
+        <div class="seat" Value="B1"></div>
+        <div class="seat" Value="B2"></div>
+        <div class="seat" Value="B3"></div>
+        <div class="seat" Value="B4"></div>
+        <div class="seat" Value="B5"></div>
+        <div class="seat" Value="B6"></div>
+        <div class="seat" Value="B7"></div>
+        <div class="seat" Value="B8"></div>
     </div>
     <div class="row">
         <div class="seat occupied"></div>
@@ -119,13 +132,20 @@
         <small>Sold</small>
       </li>
     </ul>
-  
     <p class="text">You have selected <span id="count">0</span> seats for a price of EGP <span id="total">0</span></p>
+    
+    
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" style="display: none;"id="day" name="day">
+      <input type="text" style="display: none;"id="time" name="time">
+      <input type="number"style="display: none;"id="price" name="price">
+      <div >
+        <a href="{% url 'home'%}" class="action" style="margin-right: 800px;">Cancel Booking</a>
+        <button type="submit" class="action">Confrim Booking</button>
+        </div>
+    </form>
     <script src="{%  static 'reserve/seats.js' %}"></script>
-    <div >
-    <a href="{% url 'home'%}" class="action" style="margin-right: 800px;">Cancel Booking</a>
-    <a href="#" class="action">Confrim Booking</a>
-    </div>
   </div>
   
 {% endblock %}

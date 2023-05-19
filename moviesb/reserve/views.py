@@ -7,7 +7,7 @@ CreateView,
 UpdateView,
 DeleteView
 )
-from .models import customer,contact
+from .models import customer,contact,booking
 from django.urls import reverse_lazy, reverse
 from django.http import JsonResponse
 
@@ -42,6 +42,33 @@ def ant(request):
 def maneater(request):
     return render(request,'reserve/maneater.html')
 def seats(request):
+    if request.method == 'POST':
+        # Get the form data
+        day=request.POST['day']
+        time=request.POST['time']
+        Movie="Creed 3"
+        price=request.POST['price']
+
+        # Create a new Customer object and save it to the database
+        Booking = booking(Day=day,time=time,movieName=Movie,price=price)
+        Booking.save()
+        Booking.Customer.add(Customer)
+        msg="Happy Movie, Seats were booked successfully"
+        # Redirect to a success page
+        return render(request,'reserve/home.html',{
+            "msg":msg
+        })
+
+    # If the request method is GET, just show the signup form
+    return render(request, 'reserve/seats.html')
+
+
+
+
+
+
+
+
     return render(request,'reserve/seats.html')
 
 
