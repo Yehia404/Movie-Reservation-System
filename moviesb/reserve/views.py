@@ -62,7 +62,7 @@ def seats(request):
     # If the request method is GET, just show the signup form
     return render(request, 'reserve/seats.html')
 
-
+# -----------------------------------------------------------------------------------------
 
 def shazamseat(request):
     if request.method == 'POST':
@@ -85,7 +85,7 @@ def shazamseat(request):
     # If the request method is GET, just show the signup form
     return render(request, 'reserve/shseats.html')
 
-
+# --------------------------------------------------------------------------------
 def wickseat(request):
     if request.method == 'POST':
         # Get the form data
@@ -106,7 +106,7 @@ def wickseat(request):
 
     # If the request method is GET, just show the signup form
     return render(request, 'reserve/jseats.html')
-
+#--------------------------------------------------------------------------------------
 def avatarseat(request):
     if request.method == 'POST':
         # Get the form data
