@@ -64,12 +64,72 @@ def seats(request):
 
 
 
+def shazamseat(request):
+    if request.method == 'POST':
+        # Get the form data
+        day=request.POST['day']
+        time=request.POST['time']
+        Movie="Shazam! Fury Of The Kings"
+        price=request.POST['price']
+
+        # Create a new Customer object and save it to the database
+        Booking = booking(Day=day,time=time,movieName=Movie,price=price)
+        Booking.save()
+        Booking.Customer.add(Customer)
+        msg="Happy Movie, Seats were booked successfully"
+        # Redirect to a success page
+        return render(request,'reserve/home.html',{
+            "msg":msg
+        })
+
+    # If the request method is GET, just show the signup form
+    return render(request, 'reserve/shseats.html')
 
 
+def wickseat(request):
+    if request.method == 'POST':
+        # Get the form data
+        day=request.POST['day']
+        time=request.POST['time']
+        Movie="John Wick Chapter: 4"
+        price=request.POST['price']
+
+        # Create a new Customer object and save it to the database
+        Booking = booking(Day=day,time=time,movieName=Movie,price=price)
+        Booking.save()
+        Booking.Customer.add(Customer)
+        msg="Happy Movie, Seats were booked successfully"
+        # Redirect to a success page
+        return render(request,'reserve/home.html',{
+            "msg":msg
+        })
+
+    # If the request method is GET, just show the signup form
+    return render(request, 'reserve/jseats.html')
+
+def avatarseat(request):
+    if request.method == 'POST':
+        # Get the form data
+        day=request.POST['day']
+        time=request.POST['time']
+        Movie="Avatar: The Way of Water"
+        price=request.POST['price']
+
+        # Create a new Customer object and save it to the database
+        Booking = booking(Day=day,time=time,movieName=Movie,price=price)
+        Booking.save()
+        Booking.Customer.add(Customer)
+        msg="Happy Movie, Seats were booked successfully"
+        # Redirect to a success page
+        return render(request,'reserve/home.html',{
+            "msg":msg
+        })
+
+    # If the request method is GET, just show the signup form
+    return render(request, 'reserve/avseats.html')
 
 
-
-    return render(request,'reserve/seats.html')
+    
 
 
 

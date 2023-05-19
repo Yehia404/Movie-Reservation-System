@@ -16,10 +16,13 @@ urlpatterns = [
     path('johnwick/',views.wick,name="wick"),
     path('antman/',views.ant,name="ant"),
     path('maneater/',views.maneater,name="maneater"),
-    path('seats/',views.seats,name="seats"),
+    path('creed/seats',views.seats,name="seats"),
     path('login/',views.login,name="login"),
     path('register/',views.register,name="register"),
     path('contact/',views.contact_us,name="contact"),
+    path('shazams/seats/',views.shazamseat,name="shazamseats"),
+    path('Johnwick/seats/',views.wickseat,name="wickseats"),
+     path('Avatar/seats/',views.avatarseat,name="avatarseats"),
     
 
 
